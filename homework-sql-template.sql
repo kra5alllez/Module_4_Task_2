@@ -40,7 +40,7 @@ GO
 --значение и Title не содержит значение 
 -------------------------------------------------------------
 SELECT * FROM Person.Person
-WHERE ModifiedDate BETWEEN '20080101 00:00:00' and '20081231 00:00:00'
+WHERE ModifiedDate BETWEEN '20080101 00:00:00' AND '20081231 00:00:00'
 	AND MiddleName IS NOT NULL
 	AND Title IS NULL
 GO
@@ -51,9 +51,10 @@ GO
 --Использовать таблицы HumanResources.EmployeeDepartmentHistory и HumanResources.Department
 -------------------------------------------------------------
 SELECT DISTINCT dep.Name
-FROM HumanResources.Department as dep
-INNER JOIN HumanResources.EmployeeDepartmentHistory AS emp ON emp.DepartmentID = emp.DepartmentID and emp.EndDate IS NULL
+FROM HumanResources.Department AS dep
+INNER JOIN HumanResources.EmployeeDepartmentHistory AS emp ON emp.DepartmentID = emp.DepartmentID AND emp.EndDate IS NULL
 GO
+
 ----------------------ЗАДАНИЕ №7-----------------------------
 --Сгрупировать данные из таблицы Sales.SalesPerson по TerritoryID
 --и вывести сумму CommissionPct, если она больше 0
